@@ -1,5 +1,7 @@
 package de.wehi;
 
+import org.apache.wicket.ajax.AjaxRequestTarget;
+import org.apache.wicket.ajax.markup.html.AjaxLink;
 import org.apache.wicket.markup.head.IHeaderResponse;
 import org.apache.wicket.markup.html.IHeaderContributor;
 import org.apache.wicket.markup.html.WebPage;
@@ -22,9 +24,16 @@ public class HomePage extends WebPage implements IHeaderContributor {
 	public HomePage(final PageParameters parameters) {
 		super(parameters);
 
-		add(new Label("version", getApplication().getFrameworkSettings().getVersion()));
+		Label versionLabel = new Label("version", getApplication().getFrameworkSettings().getVersion());
+		versionLabel.setOutputMarkupId(true);
+		add(versionLabel);
+		add(new AjaxLink<Void>("ajaxLink"){
 
-		// TODO Add your page's components here
-
+			@Override
+			public void onClick(AjaxRequestTarget ajaxRequestTarget) {
+				versionLabel.setDefaultModelObject("changed: " + versionLabel.getDefaultModelObject());
+				ajaxRequestTarget.add(versionLabel);
+			}
+		});
 	}
 }
