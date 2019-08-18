@@ -27,7 +27,7 @@ public class HomePage extends WebPage implements IHeaderContributor {
 		Label versionLabel = new Label("version", getApplication().getFrameworkSettings().getVersion());
 		versionLabel.setOutputMarkupId(true);
 		add(versionLabel);
-		add(new AjaxLink<Void>("ajaxLink"){
+		add(new AjaxLink<Void>("ajaxLink") {
 
 			@Override
 			public void onClick(AjaxRequestTarget ajaxRequestTarget) {
