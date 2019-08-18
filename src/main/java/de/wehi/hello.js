@@ -1,3 +1,3 @@
-(() => {
-    alert('hello wicket world!');
-})();
+function doStuff() {
+    alert('doing stuff...');
+}
