@@ -2,23 +2,22 @@ package de.wehi;
 
 import org.apache.wicket.util.tester.WicketTester;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 /**
  * Simple test using the WicketTester
  */
-public class TestHomePage {
+class TestHomePage {
 
 	private WicketTester tester;
 
 	@BeforeEach
-	public void setUp() {
+	void setUp() {
 		tester = new WicketTester(new WicketApplication());
 	}
 
 	@Test
-	public void homepageRendersSuccessfully() {
+	void homepageRendersSuccessfully() {
 		tester.startPage(HomePage.class);
 
 		tester.assertRenderedPage(HomePage.class);
