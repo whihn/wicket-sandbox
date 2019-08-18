@@ -33,6 +33,7 @@ class TestHomePage {
 
 		// then
 		tester.assertLabel("version", "changed: 8.5.0");
+		tester.assertLabel("personName", "Werner Hihn");
 	}
 
 }
