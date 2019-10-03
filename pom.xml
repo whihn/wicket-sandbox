@@ -24,9 +24,8 @@
 	<artifactId>wicket-sandbox</artifactId>
 	<packaging>war</packaging>
 	<version>1.0-SNAPSHOT</version>
-		<!-- TODO project name  -->
-	<name>quickstart</name>
-	<description></description>
+	<name>wicket-sandbox</name>
+	<description>Simple Wicket Sandbox</description>
 	<!--
 		<organization>
 			<name>company name</name>
