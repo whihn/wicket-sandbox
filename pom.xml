@@ -26,12 +26,6 @@
 	<version>1.0-SNAPSHOT</version>
 	<name>wicket-sandbox</name>
 	<description>Simple Wicket Sandbox</description>
-	<!--
-		<organization>
-			<name>company name</name>
-			<url>company url</url>
-		</organization>
-	-->
 	<licenses>
 		<license>
 			<name>The Apache Software License, Version 2.0</name>
